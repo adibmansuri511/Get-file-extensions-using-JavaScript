@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to left bottom, #bc5203, #c56b2d, #cd834f, #d39a71, #d8b194);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+/* form label h5 {
+    width: 300px;
+} */
+
+form input {
+    height: 40px;
+    width: 100%;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    background-color: #bd5c00;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+form input:focus {
+    outline: 3px solid #924701;
+    background-color: #924701;
+    transition-duration: 100ms;
+}
+
+.text-dark {
+    color: #000000 !important;
+}
+
+
+
+/* Start Submit Button */
+
+.btn-01,
+.btn-01 *,
+.btn-01 :after,
+.btn-01 :before,
+.btn-01:after,
+.btn-01:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-01 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #bd5c00;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.btn-01:disabled {
+    cursor: default;
+}
+
+.btn-01:-moz-focusring {
+    outline: auto;
+}
+
+.btn-01 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-01 [hidden] {
+    display: none;
+}
+
+.btn-01 {
+    border-radius: 99rem;
+    border-width: 2px;
+    padding: 0.5rem 1rem;
+    z-index: 0;
+}
+
+.btn-01,
+.btn-01 .text-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-01 .text-container {
+    display: block;
+}
+
+/* This is important */
+.btn-01 .text {
+    display: block;
+    /* mix-blend-mode: difference; */
+    position: relative;
+}
+
+.btn-01:hover .text {
+    -webkit-animation: move-up-alternate 0.3s forwards;
+    animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(80%);
+    }
+
+    51% {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-up-alternate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(80%);
+    }
+
+    51% {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.btn-01:after,
+.btn-01:before {
+    --tilt: 20px;
+    background: #924701;
+    -webkit-clip-path: polygon(0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%);
+    clip-path: polygon(0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%);
+    content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s;
+    width: 100%;
+}
+
+.btn-01:after {
+    -webkit-clip-path: polygon(var(--tilt) 0,
+            0 50%,
+            var(--tilt) 100%,
+            100% 100%,
+            100% 0);
+    clip-path: polygon(var(--tilt) 0, 0 50%, var(--tilt) 100%, 100% 100%, 100% 0);
+    left: 100%;
+    z-index: -1;
+}
+
+.btn-01:hover:before {
+    transform: translateX(100%);
+}
+
+.btn-01:hover:after {
+    transform: translateX(-100%);
+}
+
+/* End Submit Button */
