@@ -3,29 +3,24 @@
 // Get button element and add click event listener on it and assign to element variable.
 const myBtn = document.getElementById("myBtn");
 
-myBtn.addEventListener("click", randomNumber);
+myBtn.addEventListener("click", checkFileExtension);
 
 
-function randomNumber(e) {
+function checkFileExtension(e) {
     e.preventDefault();
 
     // Show the result on this #h5 id.
-    let result = document.querySelector('#h4');
+    const output = document.querySelector('#output');
 
-    // Get Minimum value from input
-    let minValue = Number(document.getElementById("minValue").value);
+    // Get file name from form input
+    const fileName = document.getElementById("formFile").value;
 
-    // Get Maximum value from input
-    let maxValue = Number(document.getElementById("maxValue").value);
+    // By the help of split() method, we will split the filename into 2 parts.The first part will be the filename and the second part will be the extension of the file.
+    // The extension can then be got by popping from the array the last string with the pop() method.This is hence the file extension of the file selected.
+    extension = fileName.split('.').pop();
 
-    // Random number generation equation
-    let randomNumber = (Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue);
-
-    randomNumber = `The random number between <span style="color: #ffffff">${minValue}</span> and <span style="color: #ffffff">${maxValue}</span> is : <span style="color: #ffffff">${randomNumber}</span>`;
-
-    result.innerHTML = randomNumber;
-    console.log(randomNumber);
-
+    output.innerHTML = extension;
+    console.log(extension);
 }
 
 
